@@ -1,0 +1,279 @@
+body{
+  font-family:"Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/*Hero starts*/
+.hero{
+  background: #0f172a;
+  color: #ffffff;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h1{
+  font-size: 52px;
+  font-weight: 700;
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+.hero p{
+  font-size: 18px;
+  color:#cbd5e1;
+  max-width:600px;
+  margin: 0 auto 32px;
+}
+
+.hero-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight:600;
+  border-radius:999px;
+  cursor: pointer;
+}
+
+.hero-btn:hover {
+  background: #1d4ed8;
+}
+/*Hero ends*/
+
+/*Features start*/
+.features{
+  background: #eeeeee;
+  padding:40px 20px;
+}
+
+.feature{
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items:center;
+  background-color: #f4fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 100px;
+}
+
+.feature.reverse{
+  direction: rtl;
+}
+
+.feature.reverse > * {
+  direction: ltr;
+}
+
+.feature h3{
+  font-size: 28px;
+  margin-bottom: 16px;
+  color: #0f172a;
+}
+
+.feature p{
+  font-size: 16px;
+  color:#475569;
+  line-height:1.6;
+}
+
+.feature-image img{
+  width:60%;
+  border-radius:12px;
+}
+/*Features ends*/
+
+/*CTA section start*/
+.cta{
+  background: #0f172a;
+  color:#ffffff;
+  padding:80px 24px;
+  text-align: center;
+}
+
+.cta h2{
+  font-size: 2.25rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.cta p{
+  max-width: 520px;
+  margin: 0 auto 32px;
+  font-size: 1.125rem;
+  color:#cbd5f5;
+}
+
+.cta button{
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight:600;
+  border-radius:999px;
+  cursor: pointer;
+}
+
+.cta button:hover{
+  background: #1d4ed8;
+}
+/*CTA section ends*/
+/*Footer section Starts*/
+.footer{
+  background: #0f172a;
+  color: #cbd5f5;
+  padding: 64px 24px;
+}
+
+.footer-container{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 0.8fr;
+  gap: 48px;
+}
+
+.footer h4{
+  color: #ffffff;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.footer p{
+  font-size: 0.95rem;
+}
+
+.footer li{
+  font-size: 0.9rem;
+  margin-bottom:8px;
+  cursor: pointer;
+}
+
+.footer li:hover{
+  color:#ffffff;
+}
+
+.footer img{
+  width: 50%;
+}
+
+
+/*Footer section ends*/
+
+/*builder section starts*/
+.builder{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+.builder-form{
+  padding: 32px;
+  border-right:1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  gap:16px;
+}
+
+.builder-form input{
+  padding: 12px;
+  font-size: 1rem;
+}
+
+.builder-preview{
+  padding: 32px;
+  background: #f8fafc;
+}
+
+
+.builder-preview * { 
+  word-wrap: break-word;    /*prevent pdf clipping*/
+}
+
+.cv-section{
+  margin-bottom: 20px;
+}
+/*builder section ends*/
+
+/*preview section starts*/
+.cv.preview{
+  width: 749px;
+  min-height: 1123px;
+  background: white;
+  padding: 32px;
+}
+
+.builder-preview {
+  width: 794px;
+  min-height: 1123px;
+  padding: 40px;
+  background: white;
+  color: #111;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+.builder-preview h1{
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.builder-preview h3{
+  font-size: 16px;
+  margin-top: 24px;
+  margin-bottom:8px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 4px;
+}
+
+.builder-preview p,
+.builder-preview li{
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 2px 0;
+}
+
+.builder-preview ul{
+  padding-left: 18px;
+  margin: 4px 0;
+}
+
+.cv-item{
+  margin-bottom: 12px;
+}
+
+.cv-item-header{
+  display: flex;
+  justify-content: space-between;
+  font-size:13px;
+}
+
+.cv-item-sub{
+  font-size: 13px;
+  font-style: italic;
+  margin-bottom: 4px;
+}
+
+.cv-item,
+.cv-section{
+  page-break-inside: avoid;
+}
+
+.cv-contact{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.cv-skills{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 30px;
+}
+/*preview section ends*/
+
