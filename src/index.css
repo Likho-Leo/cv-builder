@@ -183,10 +183,12 @@ body{
   font-size: 1rem;
 }
 
+/*
 .builder-preview{
   padding: 32px;
   background: #f8fafc;
 }
+*/
 
 
 .builder-preview * { 
@@ -209,7 +211,7 @@ body{
 .builder-preview {
   width: 794px;
   min-height: 1123px;
-  padding: 40px;
+  padding: 48px;
   background: white;
   color: #111;
   font-family: "Inter", sans-serif;
@@ -249,6 +251,11 @@ body{
   display: flex;
   justify-content: space-between;
   font-size:13px;
+
+}
+
+.cv-item-header span{
+  white-space: nowrap;
 }
 
 .cv-item-sub{
@@ -273,7 +280,7 @@ body{
 .cv-skills{
   display: flex;
   flex-wrap: wrap;
-  gap: 30px 30px;
+  gap: 16px 24px;
 }
 /*preview section ends*/
 
