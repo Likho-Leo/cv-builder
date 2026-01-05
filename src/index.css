@@ -1,5 +1,6 @@
 body{
   font-family:"Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
 }
 
 /*Hero starts*/
@@ -164,6 +165,26 @@ body{
 /*Footer section ends*/
 
 /*builder section starts*/
+@media print {
+  body{
+    margin : 0;
+  }
+
+  .builder{
+    grid-template-columns: 1fr;
+  }
+
+  .builder-form {
+    display: none;
+  }
+
+  .builder-preview{
+    width: 100%;
+    padding: 24px;
+    margin: 0;
+  }
+}
+
 .builder{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -211,7 +232,7 @@ body{
 .builder-preview {
   width: 794px;
   min-height: 1123px;
-  padding: 48px;
+  padding: 24px;
   background: white;
   color: #111;
   font-family: "Inter", sans-serif;
