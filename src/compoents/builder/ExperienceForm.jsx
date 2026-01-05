@@ -2,6 +2,42 @@ import AddButton from "../buttons/AddButton";
 import RemoveButton from "../buttons/RemoveButtons";
 
 function ExperienceForm({ cv, setCv }) {
+
+  const isFutureDate = (value) => {
+    if(!value) return false;
+    const inputDate = new Date (value);
+    const today = new Date();
+    today.setHours(0,0,0,0);
+    return inputDate > today;
+  };
+
+  const isStartAfterEnd = (start, end) => {
+    if (!start || !end) return false;
+    return new Date(start) > new Date(end);
+  };
+
+  const handleDateChange = (index, field, value) => {
+    setCv(prev => {
+      const updated = [...prev.experience];
+      const exp = {...updated[index], [field]: value};
+
+      //no future dates
+      if(isFutureDate(value)) {
+        alert("Future dates are not allowed");
+        return prev;
+      }
+
+      //start<=end
+      if(isStartAfterEnd(exp.startDate, exp.endDate)) {
+        alert("STart date cannot be after end date");
+        return prev;
+      }
+
+      updated[index] = exp;
+      return {...prev, experience: updated};
+    });
+  };
+  
     return (
       <>
         <section className="cv-section">
@@ -36,26 +72,20 @@ function ExperienceForm({ cv, setCv }) {
             />
   
             <input
-              type="date"
+              type="month"
+              max = {new Date().toISOString().slice(0, 7)}
               value={exp.startDate}
               onChange={e =>
-                setCv(prev => {
-                  const updated = [...prev.experience];
-                  updated[index].startDate = e.target.value;
-                  return { ...prev, experience: updated };
-                })
+                handleDateChange(index, "startDate", e.target.value)
               }
             />
   
             <input
-              type="date"
+              type="month"
+              max = {new Date().toISOString().slice(0, 7)}
               value={exp.endDate}
               onChange={e =>
-                setCv(prev => {
-                  const updated = [...prev.experience];
-                  updated[index].endDate = e.target.value;
-                  return { ...prev, experience: updated };
-                })
+               handleDateChange(index, "endDate", e.target.value)
               }
             />
   
