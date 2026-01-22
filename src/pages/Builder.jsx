@@ -54,6 +54,7 @@ function Builder(){
                 qualification: "",
                 institution: "",
                 gradYear: "",
+                completed: true,
             },
         ],
 
